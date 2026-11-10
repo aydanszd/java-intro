@@ -13,6 +13,19 @@ public class task31 {
         System.out.print("Business class? (true/false): ");
         boolean isBusiness = input.nextBoolean();
 
+        if (age < 0) {
+            System.out.println("Error: Age cannot be negative");
+            return;
+        }
+        if (price <= 0) {
+            System.out.println("Error: Ticket price must be positive");
+            return;
+        }
+        if (weight < 0) {
+            System.out.println("Error: Baggage weight cannot be negative");
+            return;
+        }
+
         double ticket = price;
 
         if (age < 2) {

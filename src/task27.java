@@ -14,6 +14,8 @@ public class task27 {
 
         if (amount <= 0) {
             System.out.println("Error: Amount must be greater than 0");
+        } else if (prev < 0) {
+            System.out.println("Error: Previous withdrawal cannot be negative");
         } else if (amount > BALANCE) {
             System.out.println("Error: Insufficient balance");
         } else if (prev + amount > LIMIT) {

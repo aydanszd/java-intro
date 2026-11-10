@@ -15,12 +15,18 @@ public class task34 {
         System.out.print("Password: ");
         String pass = input.next();
 
-        if (active && door && !home) {
-            System.out.println("ALARM!");
-        } else if (active && home && pass.equals(PASSWORD)) {
+        if (!active) {
+            System.out.println("System is off. No alarm");
+        } else if (home && pass.equals(PASSWORD)) {
             System.out.println("System turned off");
+        } else if (home && door) {
+            System.out.println("Door is open, owner is home. No alarm");
+        } else if (home) {
+            System.out.println("Owner is home. Wrong password, system stays active");
+        } else if (door) {
+            System.out.println("ALARM!");
         } else {
-            System.out.println("No alarm");
+            System.out.println("Door is closed. No alarm");
         }
     }
 }

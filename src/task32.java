@@ -11,6 +11,11 @@ public class task32 {
         System.out.print("SMS: ");
         int sms = input.nextInt();
 
+        if (minutes < 0 || gb < 0 || sms < 0) {
+            System.out.println("Error: Values cannot be negative");
+            return;
+        }
+
         double total = 10;
 
         if (minutes > 100) {

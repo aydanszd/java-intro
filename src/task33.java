@@ -13,6 +13,14 @@ public class task33 {
         System.out.print("Score (0-100): ");
         int score = input.nextInt();
 
+        if (salary <= 0) {
+            System.out.println("Error: Salary must be positive");
+            return;
+        }
+        if (years < 0) {
+            System.out.println("Error: Experience cannot be negative");
+            return;
+        }
         if (score < 0 || score > 100) {
             System.out.println("Error: Score must be between 0 and 100");
             return;
